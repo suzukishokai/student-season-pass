@@ -3259,12 +3259,20 @@ button:focus-visible {
   }
 
   .student-perk--wear .student-perk__content {
-    grid-row: 2;
+    grid-row: 1;
   }
 
   .student-perk--wear .student-perk__visual {
-    grid-row: 1;
+    grid-row: 2;
   }
+
+.student-perk--meal .student-perk__content {
+  grid-row: 1;
+}
+
+.student-perk--meal .student-perk__visual {
+  grid-row: 2;
+}
 
   .student-perk h3 {
     font-size: clamp(2.6rem, 14vw, 4.2rem);
