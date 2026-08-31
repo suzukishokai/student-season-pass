@@ -5019,3 +5019,127 @@ url("assets/rental-gear.jpg")
     font-size: clamp(2.1rem, 10vw, 3.5rem);
   }
 }
+
+
+/* =========================================================
+   Application form / terms document buttons
+========================================================= */
+.document-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.document-action {
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 18px;
+  min-height: 118px;
+  padding: 22px 24px;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition),
+    border-color var(--transition),
+    background var(--transition);
+}
+
+.document-action:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(20, 118, 184, 0.35);
+}
+
+.document-action--download:hover {
+  background: #fffbee;
+  border-color: rgba(255, 213, 72, 0.75);
+}
+
+.document-action__icon {
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  color: var(--white);
+  background: var(--navy-900);
+  border-radius: 50%;
+  font-family: var(--font-en);
+  font-size: 0.9rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+}
+
+.document-action--download .document-action__icon {
+  color: var(--navy-950);
+  background: var(--yellow-500);
+  font-size: 1.7rem;
+}
+
+.document-action__text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.document-action__text small {
+  color: var(--blue-600);
+  font-family: var(--font-en);
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+}
+
+.document-action__text strong {
+  margin-top: 3px;
+  color: var(--navy-950);
+  font-size: 1.05rem;
+  font-weight: 900;
+  line-height: 1.45;
+}
+
+.document-action__text b {
+  margin-top: 5px;
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.document-action__arrow {
+  color: var(--navy-800);
+  font-size: 1.35rem;
+  font-weight: 900;
+}
+
+@media (max-width: 760px) {
+  .document-actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .document-action {
+    grid-template-columns: 48px minmax(0, 1fr) auto;
+    gap: 13px;
+    min-height: 100px;
+    padding: 18px;
+  }
+
+  .document-action__icon {
+    width: 48px;
+    height: 48px;
+    font-size: 0.75rem;
+  }
+
+  .document-action--download .document-action__icon {
+    font-size: 1.4rem;
+  }
+
+  .document-action__text strong {
+    font-size: 0.95rem;
+  }
+}
